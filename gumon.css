@@ -1,0 +1,197 @@
+/* --- RESET & FONT --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: #fdfaf6;
+    color: #3e2723;
+    line-height: 1.6;
+}
+
+/* --- NAVBAR --- */
+header {
+    background: #3e2723;
+    padding: 20px 10%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd54f;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+/* --- HERO SECTION (BANNER) --- */
+.hero {
+    height: 100vh;
+    /* Pastikan gradien overlay tetap ada agar teks putih terlihat jelas */
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                url("monyet.png"); /* Tautan gambar diganti menjadi monyet.png */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 12px 40px;
+    background: #d7a86e;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* --- MENU SECTION --- */
+.menu-section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.2rem;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.menu-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.price {
+    color: #8d6e63;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+/* --- CONTACT SECTION --- */
+.contact-section {
+    padding: 60px 10%;
+    text-align: center;
+    background: #efebe9;
+    margin-top: 50px;
+}
+
+.btn-wa {
+    display: inline-block;
+    padding: 15px 50px;
+    background: #25d366;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+/* --- FOOTER --- */
+footer {
+    background: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+.menu-btn {
+    display: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: #3e2723;
+        width: 100%;
+        left: 0;
+        top: 70px;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .nav-links.active {
+        display: flex;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+    
+    .hero-content h1 { font-size: 2rem; }
+}
